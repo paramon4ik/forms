@@ -1,0 +1,51 @@
+body {
+    font-family: "roboto", sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font: 700 20px "Roboto" sans-serif;
+    letter-spacing: 0px;
+    color: #b3b3b3;
+    text-transform: uppercase;
+}
+
+.simple input,
+.simple select,
+.simple textarea {
+    width: 330px;
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto" sans-serif;
+    border:1px solid #b3b3b3;
+}
+
+.simple input:hover,
+.simple select:hover,
+.simple textarea:hover {
+    border-color: #3d69ff;
+}
+
+
+.simple .simple-button {
+    padding: 15px;
+    font: 700 14px "Roboto" sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: #12d661;
+    border: none;
+}
+
+.simple-button:hover {
+    background-color: #07be51;
+}
+
