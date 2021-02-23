@@ -1,5 +1,6 @@
 body {
-    font-family: "roboto", sans-serif;
+    margin: 75px 0 145px 0`;
+    font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -12,40 +13,588 @@ h1 {
 }
 
 h2 {
-    font: 700 20px "Roboto" sans-serif;
+    font: 700 20px "Roboto", sans-serif;
     letter-spacing: 0px;
     color: #b3b3b3;
     text-transform: uppercase;
 }
 
-.simple input,
-.simple select,
-.simple textarea {
-    width: 330px;
-    font-size: 14px;
-    color: #b3b3b3;
-    font-weight: 400;
-    font-family: "Roboto" sans-serif;
-    border:1px solid #b3b3b3;
+.number1 {
+    margin-bottom: 30px;
 }
 
-.simple input:hover,
-.simple select:hover,
-.simple textarea:hover {
+.number2 {
+    margin-bottom: 45px;
+    margin-top: 50px;
+}
+
+.number3 {
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.number4 {
+    margin-top: 45px;
+    margin-bottom: 35px;
+}
+
+.number5 {
+    margin-top: 50px;
+}
+
+.simple {
+    margin-bottom: 100px;
+    max-width: 330px;
+}
+
+.simple p {
+    margin: 10px 0;
+}
+
+.simple input,
+.maxwidth,
+.city select,
+.tablefive input,
+.country select,
+textarea {
+    padding: 11px 15px;
+    outline: none;
+    width: 100%;
+    font: 400 14px "Roboto", sans-serif;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input:focus,
+.city select:focus,
+textarea:focus {
+    border-color: #3d69ff;
+    box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
+}
+
+textarea {
+    height: 130px;
+    resize: none;
+}
+
+input:not(.reset):hover,
+.city select:hover,
+textarea:hover {
     border-color: #3d69ff;
 }
 
 
-.simple .simple-button {
+input.button {
     padding: 15px;
-    font: 700 14px "Roboto" sans-serif;
+    width: 100%;
+    font: 700 14px "Roboto", sans-serif;
     color: #fff;
     text-align: center;
     background-color: #12d661;
     border: none;
 }
 
-.simple-button:hover {
+.button:hover {
     background-color: #07be51;
+    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
 }
 
+.city,
+.country {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+
+}
+
+.city select,
+.country select {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    color: #1f222c;
+}
+
+.city::before {
+    top: 14px;
+}
+
+.country::before {
+    top: 30px;
+}
+
+.city::before,
+.country::before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 4px solid transparent;
+    border-right-color: #1f222c;
+    border-bottom-color: #1f222c;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.city option:first-child {
+    display: none;
+}
+
+.elements {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.left {
+    min-width: 130px;
+}
+
+.elements p,
+.styled-table {
+    font: 400 14px "Roboto", sans-serif;
+    color: #1f222c;
+}
+
+.radio {
+    visibility: hidden;
+    position: absolute;
+}
+
+.radio+label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.radio+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.radio:checked+label::before {
+    border: 1px solid #3e6aff;
+}
+
+.radio:checked+label::after {
+    background-color: #fff;
+}
+
+.radio:checked+label::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 7px;
+    height: 7px;
+    background-color: #3e6aff;
+    border-radius: 50%;
+}
+
+.checkbox,
+.tablecheck {
+    visibility: hidden;
+    position: absolute;
+}
+
+.checkbox+label,
+.tablecheck+label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.checkbox+label::before,
+.tablecheck+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.checkbox:checked+label::before,
+.tablecheck:checked+label::before {
+    border: 1px solid #244dd7;
+}
+
+.checkbox:checked+label::after,
+.tablecheck:checked+label::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: 2px solid transparent;
+    border-bottom-color: #244dd7;
+    border-right-color: #244dd7;
+    transform: rotate(45deg);
+}
+
+.styled-table {
+    padding: 12px 4px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.styled-table td {
+    padding: 8px 16px;
+}
+
+.elements-input {
+    display: flex;
+    justify-content: space-between;
+    width: 355px;
+}
+
+.elements-input p {
+    margin: 0;
+}
+
+.strong {
+    font: 700 14px "Roboto", sans-serif;
+    color: #b3b3b3;
+    box-sizing: border-box;
+}
+
+.strong4 {
+    font: 700 18px "Roboto", sans-serif;
+    color: #1f222c;
+
+}
+
+.styled-box {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 680px;
+    box-sizing: border-box;
+}
+
+.styledradio {
+    font: 700 16px "Roboto", sans-serif;
+}
+
+.styledbox {
+    font: 400 14px "Roboto", sans-serif;
+}
+
+.styledcheckbox {
+    visibility: hidden;
+    position: absolute;
+}
+
+.styledcheckbox+label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.styledcheckbox+label::before {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: -3px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+    transition: all 0.5s ease;
+}
+
+.styledcheckbox:checked+label::before {
+    background-color: #3e6aff;
+}
+
+.styledcheckbox+label::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: -1px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 2.5px rgba(0,0,0,0.5));
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.styledcheckbox:checked+label::after {
+    left: -12px;
+}
+
+.date {
+    padding: 9px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+}
+
+.radiostyledman,
+.radiostyledwoman {
+    visibility: hidden;
+    position: absolute;
+}
+
+.radioman {
+    margin-bottom: 68px;
+}
+
+.radiostyledman+label,
+.radiostyledwoman+label {
+    position: relative;
+    padding-left: 85px;
+}
+
+.radiostyledman+label::before,
+.radiostyledwoman+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -27px;
+    width: 70px;
+    height: 70px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background:#e8e8e8 no-repeat center bottom;
+    filter: grayscale(100%);
+}
+.radiostyledman+label::before {
+    background-image: url(../image/man.png);
+}
+
+.radiostyledwoman+label::before {
+    background-image: url(../image/woman\ .png);
+}
+
+.radiostyledman:checked+label::before,
+.radiostyledwoman:checked+label::before {
+    border-color: #3e6aff;
+    filter: grayscale(0);
+}
+
+.tableform {
+    margin-bottom: 50px;
+    max-width: 500px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableform td {
+    padding: 7px 0;
+    vertical-align: top;
+    font: 400 14px "Roboto", sans-serif;
+    color: #1f222c;
+}
+
+.tableform td:first-child {
+    width: 30%;
+    padding: 19px 0;
+}
+
+td.gendertd {
+    padding: 19px 0;
+}
+
+.gendertd label {
+    margin-right: 25px;
+}
+
+.maxwidth {
+    width: 100%;
+}
+
+#foto {
+    display: none;
+}
+
+.foto {
+    display: inline-block;
+}
+
+.foto:before {
+    content: 'Виберіть файл';
+    display: inline-block;
+    padding: 13px 34px;
+    font: 700 14px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: #3e6aff;
+    border-radius: 3px;
+}
+
+.foto:hover:before {
+    background-color: #2857f4;
+    box-shadow: 0px 2px 2.5px rgba(15,40,126,0.35);
+}
+
+.fixform {
+    width: 309px;
+    position: fixed;
+    top: 64px;
+    right: 120px;
+    z-index: 10;
+}
+
+.fixformwrap {
+    padding: 45px 25px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.15);
+    border: 1px solid #e6e6e6;
+    background-color: #fafafa;
+}
+
+.fixform input:not(.button) {
+    padding: 11px 15px;
+    width: 100%;
+    font: 400 14px "Roboto", sans-serif;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.fixform input:not(.button):hover{
+    border-color: #3d69ff;
+}
+
+.fixform a {
+    font: 400 13px "Roboto", sans-serif;
+    color: #3e6aff;
+    text-decoration: none;
+}
+
+.fixform p {
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+p.mb30 {
+    margin-bottom: 30px;
+}
+
+.absolutelabel+label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font: 400 13px "Roboto", sans-serif;
+    color: #b3b3b3;
+}
+
+
+.fixform a:hover {
+    text-decoration: underline;
+}
+
+.fixcheck+label {
+    font: 400 13px "Roboto", sans-serif;
+    color: #1f222c;
+}
+
+.cross {
+    position: absolute;
+    visibility: hidden;
+}
+
+.cross+label::before {
+    position: absolute;
+    content: '+';
+    right: 10px;
+    top: 60px;
+    font-size: 20px;
+    color: #949494;
+    transform: rotate(45deg);
+}
+
+.cross:checked~h2,
+.cross:checked~.fixformwrap,
+.cross:checked+label::before {
+    display: none;
+}
+
+.formfive {
+    max-width: 680px;
+}
+
+.tablefive p {
+    position: relative;
+    margin: 0;
+}
+
+.tablefive {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.tablefive td {
+    position: relative;
+    padding: 20px 10px 17px 0;
+}
+
+.tablefive td:last-child {
+    padding-right: 0;
+}
+
+hr {
+    margin: 15px 0 25px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid #e9e9e9;
+}
+
+.fiveflex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset {
+    padding: 15px;
+    font: 700 14px "Roboto", sans-serif;
+    color: #6e6f77;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #85868d;
+}
+
+.reset:hover {
+    background-color: #85858d;
+    color: #fff;
+
+}
+
+.submit {
+    padding: 15px;
+    font: 700 14px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    background-color: #12d661
+}
+
+.submit:hover {
+    background-color: #07bd51;
+}
+
+.fivehr {
+    margin: 30px 0;
+}
